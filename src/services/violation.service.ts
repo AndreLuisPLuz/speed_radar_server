@@ -1,4 +1,4 @@
-import { Violation } from "../migrations";
+import { Violation } from "../entities";
 import { IViolationCreatePayload } from "../contracts";
 import { AppDataSource } from "../data-source";
 
