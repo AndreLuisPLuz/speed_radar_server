@@ -12,7 +12,7 @@ const dataSourceConfig = (): DataSourceOptions => {
     type: 'mssql',
     host: process.env.DB_HOST || "localhost",
     port: parseInt(process.env.DB_PORT || "1433"),
-    username: process.env.DB_USERNAME || "default_username",
+    username: process.env.DB_USER || "default_username",
     password: process.env.DB_PASSWORD || "default_password",
     database: process.env.DB_NAME || "default_database",
     synchronize: false,
