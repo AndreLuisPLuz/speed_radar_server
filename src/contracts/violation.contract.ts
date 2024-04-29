@@ -2,4 +2,11 @@ interface IViolationCreatePayload {
     speedKmH: number;
 };
 
-export { IViolationCreatePayload };
+interface IViolationCheckUpdateResponse {
+    mustFetchAnew: boolean;
+}
+
+export {
+    IViolationCreatePayload,
+    IViolationCheckUpdateResponse
+};

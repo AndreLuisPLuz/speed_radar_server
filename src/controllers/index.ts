@@ -1,9 +1,11 @@
 import {
     createViolationController,
-    listViolationsController
+    listViolationsController,
+    checkViolationsUpdateController
 } from "./violation.controller";
 
 export {
     createViolationController,
-    listViolationsController
+    listViolationsController,
+    checkViolationsUpdateController
 };

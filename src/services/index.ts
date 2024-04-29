@@ -1,9 +1,11 @@
 import {
     createViolationService,
-    listViolationsService
+    listViolationsService,
+    checkViolationsUpdateService
 } from "./violation.service";
 
 export {
     createViolationService,
-    listViolationsService
+    listViolationsService,
+    checkViolationsUpdateService
 };

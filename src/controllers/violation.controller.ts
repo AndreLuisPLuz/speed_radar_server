@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import {
     createViolationService,
-    listViolationsService
+    listViolationsService,
+    checkViolationsUpdateService
 } from "../services";
 
 const createViolationController = async(
@@ -22,7 +23,19 @@ const listViolationsController = async(
     return res.status(200).json(violations);
 };
 
+const checkViolationsUpdateController = async(
+    req: Request,
+    res: Response
+): Promise<Response> => {
+
+    const hasBeenUpdated = await checkViolationsUpdateService(
+        String(req.query.latestViolationClientId)
+    );
+    return res.status(200).json(hasBeenUpdated);
+}
+
 export {
     createViolationController,
-    listViolationsController
+    listViolationsController,
+    checkViolationsUpdateController
 };
