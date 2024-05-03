@@ -10,12 +10,13 @@ Essa aplicação é a implementação de um servidor NodeJS para o projeto final
 # Uso da TypeORM
 
 Fazemos uso da ```TypeORM``` para mapear os objetos do servidor para tabelas no banco de dados. Isso significa que o código do servidor já possui as definições das tabelas necessárias no banco, sem a necessidade de executar queries SQL para montar as tabelas.
+
 No entanto, são necessárias fazer algumas configurações para que o servidor seja capaz de se comunicar com o banco de dados. Seguem instruções abaixo do passo a passo dessas configurações; assume-se que o SQL Server Management Studio esteja sendo usado como cliente SQL. Alguns passos podem ser diferentes se outro cliente for empregado.
 
 ***
 
 1. Acesse o SQL Server Management Studio e crie um banco de dados. ```CREATE DATABASE <nome_do_seu_db>```
-2. Localize a pasta ```Segurança```. Com um clique do botão direito, navegue pelas opções ````Novo``` > ```Logon...```
+2. Localize a pasta ```Segurança```. Com um clique do botão direito, navegue pelas opções ```Novo``` > ```Logon...```
 3. Dê um nome ao seu novo Logon, e marque o radio button ```Autenticação do SQL Server```. Defina uma senha, e desmarque a checkbox ```Import política de senha```. Selecione o banco de dados recém criado na caixa de seleção ```Banco de dados padrão```.
 4. Procure a aba ```Mapeamento de usuário```. Nela, marque a checkbox corresponde ao banco recém criado. Após isso, marque a checkbox ```db_owner``` e dê OK no seu novo Logon.
 5. Para testá-lo, desconecte da sua instância e tente se conectar de novo. Quando o prompt de conexão surgir, troque a seleção de Autenticação para ```Autenticação do SQL Server```, e entre com o nome e a senha definidos.
@@ -34,4 +35,5 @@ No entanto, são necessárias fazer algumas configurações para que o servidor 
 
 # Rodando o servidor
 
-Toda vez que se desejar usar o sistema, o servidor deve ser inicializado com o comando ```npm run dev```. Não fazê-lo implicará que a ESP-32 será incapaz de salvar suas informações no banco de dados, e que a página web será incapaz de acessá-las.
+Toda vez que se desejar usar o sistema, o servidor deve ser inicializado com o comando ```npm run dev```.
+Não fazê-lo implicará que a ESP-32 será incapaz de salvar suas informações no banco de dados, e que a página web será incapaz de acessá-las.
